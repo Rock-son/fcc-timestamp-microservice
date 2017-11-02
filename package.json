@@ -17,5 +17,8 @@
     "url": "https://github.com/Rock-son/fcc-timestamp-microservice/issues"
   },
   "homepage": "https://github.com/Rock-son/fcc-timestamp-microservice#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": "^6.1.1"
+  }
 }

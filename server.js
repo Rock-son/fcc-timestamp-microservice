@@ -3,10 +3,11 @@ var http = require("http"),
 
 
 var server = http.createServer(function(req, res) {
+    
     if (req.url === "/") {
         fs.readFile("./index.html", "utf8", function(err, file){
             if (err) throw new Error("Problem getting index.html");
-            res.writeHead(200, { 'content-type': 'text/plain' });
+            res.writeHead(200, { 'content-type': 'text/html' });
             res.end(file);
         });
     } else {
