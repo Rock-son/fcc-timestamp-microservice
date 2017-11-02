@@ -1,0 +1,24 @@
+{
+  "name": "fcc-timestamp-microservice",
+  "version": "1.0.0",
+  "description": "free code camp project\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rock-son/fcc-timestamp-microservice.git"
+  },
+  "author": "RZ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rock-son/fcc-timestamp-microservice/issues"
+  },
+  "homepage": "https://github.com/Rock-son/fcc-timestamp-microservice#readme",
+  "dependencies": {
+    "moment": "^2.19.1",
+    "normalize-url": "^1.9.1"
+  }
+}
