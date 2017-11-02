@@ -1,7 +1,5 @@
 var http = require("http"),
-    normalize = require("normalize-url"),
     fs = require("fs");
-    moment = require("moment");
 
 
 var server = http.createServer(function(req, res) {
@@ -16,11 +14,11 @@ var server = http.createServer(function(req, res) {
             options = {year: 'numeric', month: 'long', day: 'numeric'};
         
         res.writeHead(200, { 'content-type': 'text/plain' });
-
-        if (Date.parse(formattedString)) {
+        
+        if(new Date().setSeconds(formattedString)) {
+            res.end(JSON.stringify({unix: formattedString, natural: new Date(formattedString * 1000).toLocaleDateString("en-us", options)}));        
+        } else if (Date.parse(formattedString)) {
             res.end(JSON.stringify({unix: new Date(formattedString).getTime() / 1000, natural: new Date(formattedString).toLocaleDateString("en-us", options)}));
-        } else if(new Date().setSeconds(formattedString)) {
-            res.end(JSON.stringify({unix: formattedString, natural: new Date(formattedString * 1000).toLocaleDateString("en-us", options)}));
         } else {
             res.end(JSON.stringify({unix: null, natural: null}));
         }
